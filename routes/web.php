@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pagina1', function () {
+    return view('pagina1',
+    [
+        'name' => 'Camilo Guerrero',
+        'phone' => '3215193127',
+        'email' => 'sebasguerrero27@gmail.com'
+    ]
+);
+});
+
+Route::get('/pagina2/{num}', function ($num) {
+    return view('pagina2',
+    [
+        'num' => $num
+    ]
+);
+});
